@@ -1,0 +1,206 @@
+/* style.css - แก้ไขทั้งหมด */
+
+:root {
+    --primary-brown: #8B4513;
+    --secondary-brown: #A0522D;
+    --light-brown: #D2691E;
+    --cream: #F5F5DC;
+    --dark-brown: #654321;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f9f7f2;
+    color: #333;
+    padding-top: 76px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ใช้ class นี้ใน main tag */
+.main-content {
+    flex: 1;
+}
+
+.navbar {
+    background-color: var(--dark-brown);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--light-brown) !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(101, 67, 33, 0.8) 0%, rgba(101, 67, 33, 0.9) 100%), 
+    url('assets/images/thai.png') center/cover;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.province-hero {
+    background: linear-gradient(rgba(101, 67, 33, 0.8) 0%, rgba(101, 67, 33, 0.9) 100%) ;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+.btn-brown {
+    background-color: var(--primary-brown);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-brown:hover {
+    background-color: var(--secondary-brown);
+    color: white;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.bg-light-brown {
+    background-color: var(--light-brown);
+}
+
+.text-brown {
+    color: var(--primary-brown) !important;
+}
+
+.sidebar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar h5 {
+    border-bottom: 2px solid var(--light-brown);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar .list-group-item {
+    border: none;
+    background: transparent;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.sidebar .list-group-item:hover {
+    background-color: rgba(139, 69, 19, 0.1);
+    color: var(--primary-brown);
+    border-radius: 5px;
+}
+
+.sidebar .list-group-item.active {
+    background-color: var(--primary-brown);
+    border-color: var(--primary-brown);
+}
+
+/* Footer ที่แก้ไขแล้ว */
+.footer {
+    background-color: var(--dark-brown);
+    color: white;
+    margin-top: auto; /* สำคัญ: ทำให้ footer ดันตัวเองลงล่าง */
+    width: 100%;
+}
+
+.location-card {
+    border-left: 5px solid var(--light-brown);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.img-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cover: ปรับภาพให้เต็มพื้นที่ */
+    object-position: center; /* จัดให้ภาพอยู่กลาง */
+    border-radius: 20px;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--primary-brown);
+    margin-bottom: 15px;
+}
+
+
+/* หรือแยกเป็น class เฉพาะสำหรับ img */
+.historical-place-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cover: ปรับภาพให้เต็มพื้นที่ */
+    object-position: center; /* จัดให้ภาพอยู่กลาง */
+    border-radius: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    body {
+        padding-top: 66px;
+    }
+    
+    .historical-place-img {
+        height: 200px;
+    }
+}
